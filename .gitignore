@@ -1,0 +1,30 @@
+#project generated files
+modelconfig.txt
+models/**/
+hf_download/
+outputs/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env*/
+
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Misc.
+.ipynb_checkpoints/

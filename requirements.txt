@@ -1,0 +1,57 @@
+#Core-Zonos
+#PYTORCH*********************************************************************
+
+--extra-index-url=https://download.pytorch.org/whl/nightly/cpu ; sys_platform  == 'darwin'
+--extra-index-url=https://download.pytorch.org/whl/cu128 ; sys_platform  != 'darwin'
+torch==2.7.0
+torchaudio
+
+
+
+#triton
+https://github.com/woct0rdho/triton-windows/releases/download/empty/triton-3.3.0-py3-none-any.whl ; sys_platform == 'win32' #egg:3.3.0
+triton-windows==3.3.0.post19 ; sys_platform == 'win32' # tw
+triton ; sys_platform == 'linux'
+
+
+#FLASH ATTENTION*************************************************
+#flash lin online
+https://github.com/loscrossos/lib_flashattention/releases/download/v2.7.4.post1_crossos00/flash_attn-2.7.4.post1-cp312-cp312-linux_x86_64.whl ; sys_platform == 'linux' #egg:v2.7.4.post1
+#flash win ONLINE
+https://github.com/loscrossos/lib_flashattention/releases/download/v2.7.4.post1_crossos00/flash_attn-2.7.4.post1-cp312-cp312-win_amd64.whl ; sys_platform == 'win32' #egg:v2.7.4.post1
+
+
+
+
+#causal conv1d******************************
+causal-conv1d>=1.5.0.post8 ; sys_platform == 'linux'
+https://github.com/loscrossos/lib_causal-conv1d/releases/download/v1.5.0.post8_crossos00/causal_conv1d-1.5.0.post8-cp312-cp312-win_amd64.whl  ; sys_platform == 'win32' #egg:v1.5.0.post8
+
+
+
+#mamba******************************
+#linux
+mamba-ssm>=2.2.4 ; sys_platform == 'linux'
+# Windows
+..\0resources\pytorch_27_p312whl\mamba_ssm-2.2.4-cp312-cp312-win_amd64.whl; sys_platform == 'win32' #egg:v2.2.4
+
+
+
+
+#common
+packaging
+setuptools
+wheel
+inflect>=7.5.0
+kanjize>=1.5.0
+numpy>=2.2.2
+phonemizer>=3.3.0
+sudachidict-full>=20241021
+sudachipy>=0.6.10
+transformers>=4.48.1
+soundfile>=0.13.1
+huggingface-hub>=0.28.1
+gradio>=5.15.0
+
+
+dotenv
