@@ -33,7 +33,7 @@ https://github.com/loscrossos/lib_causal-conv1d/releases/download/v1.5.0.post8_c
 #linux
 mamba-ssm>=2.2.4 ; sys_platform == 'linux'
 # Windows
-..\0resources\pytorch_27_p312whl\mamba_ssm-2.2.4-cp312-cp312-win_amd64.whl; sys_platform == 'win32' #egg:v2.2.4
+../0resources/pytorch_27_p312whl/mamba_ssm-2.2.4-cp312-cp312-win_amd64.whl; sys_platform == 'win32' #egg:v2.2.4
 
 
 
