@@ -8,8 +8,16 @@ in_dotenv_needed_paths = {
     "HF_HOME": "./models/hf_download",
 }
 
+de_disable_torch_compile_default=True
+import sys
+if sys.platform == "linux":
+    de_disable_torch_compile_default=False
+if sys.platform == "darwin":
+    de_disable_torch_compile_default=False
+
+
 in_dotenv_needed_params = {
-    "DISABLE_TORCH_COMPILE_DEFAULT": True,
+    "DISABLE_TORCH_COMPILE_DEFAULT": de_disable_torch_compile_default,
     "DEBUG_MODE": False,
 
 }
@@ -19,7 +27,7 @@ in_dotenv_needed_params = {
 #########################################################################
 debug_mode=False
 LCX_APP_NAME="CROSSOS_FILE_CHECK"
-DEFAULT_MODEL_CONFIG_FILE = "modelconfig.txt"
+DEFAULT_MODEL_CONFIG_FILE = "configmodel.txt"
 in_model_config_file=DEFAULT_MODEL_CONFIG_FILE
 # --- Helper Functions ---
 #dotenv prefixes
@@ -326,19 +334,14 @@ if debug_mode:
 
 
 
-
 disable_torch_compile_default=out_dotenv_loaded_params["DISABLE_TORCH_COMPILE_DEFAULT"]
-if sys.platform == "linux":
-    disable_torch_compile_default=False
-if sys.platform == "darwin":
-    disable_torch_compile_default=False
 
 
 AI_MODEL_DIR_TF=out_dotenv_loaded_models[   "Zyphra/Zonos-v0.1-transformer"]
 AI_MODEL_DIR_HY=out_dotenv_loaded_models[    "Zyphra/Zonos-v0.1-hybrid"]
 
 
-AI_MODEL_DIR= AI_MODEL_DIR_TF
+AI_MODEL_DIR= AI_MODEL_DIR_HY
 
 
 
