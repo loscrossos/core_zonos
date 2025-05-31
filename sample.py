@@ -341,7 +341,7 @@ AI_MODEL_DIR_TF=out_dotenv_loaded_models[   "Zyphra/Zonos-v0.1-transformer"]
 AI_MODEL_DIR_HY=out_dotenv_loaded_models[    "Zyphra/Zonos-v0.1-hybrid"]
 
 
-AI_MODEL_DIR= AI_MODEL_DIR_HY
+AI_MODEL_DIR= AI_MODEL_DIR_TF
 
 
 

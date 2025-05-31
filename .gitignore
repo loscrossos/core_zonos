@@ -1,8 +1,15 @@
 #project generated files
 modelconfig.txt
+configmodel.txt
 models/**/
 hf_download/
 outputs/
+repo/
+loras/
+queue.json
+settings.json
+temp/
+*.wav
 
 # Environments
 .env
@@ -28,3 +35,8 @@ wheels/
 
 # Misc.
 .ipynb_checkpoints/
+
+
+#MacOS
+
+**/.DS_Store
