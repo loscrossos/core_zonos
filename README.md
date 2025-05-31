@@ -242,12 +242,12 @@ Thats it.
 
 ---
 
-At this point you *could* just start the apps and start generating away... but it would first automatically download the models (all 90GB of them). If you dont have the models yet thats ok. But if you have already downloaded them OR if you have a dual/trial/multiboot machine and want to make them portable, read on...
+At this point you *could* just start the apps and start generating away... but it would first automatically download the models (6GB of them). If you dont have the models yet thats ok. But if you have already downloaded them OR if you have a dual/trial/multiboot machine and want to make them portable, read on...
 
 
 ## Model Installation
 
-The needed models are about 90GB in total. You can get them in 3 ways:
+The needed models are about 6GB in total. You can get them in 3 ways:
 - **Automatic Download** as huggingface cache (easiest way)
 - **Manually triggered model download** (reccomended way. second easiest)
 - **Re-use existing models**: hf_download or manual
