@@ -5,7 +5,6 @@ This project does not aim at more functionality. *It hardens the core*.
 ## Features
 - **CrossOS**: works on MacOS (transformes only), Windows and Linux
 - **Fully Accelerated** comes with built-in:
-    - Enabled Torch-Compile mode on windows
     - CUDA fully enabled (Win/Lin) for all accelerators.
     - All accelerators: triton, FlashAttention CausalConv1d and Mamba included and pre-built-in for Win/Lin
     - Full support for Nvidia 50xx series GPUs (Blackwell) with custom built libraries and code fixes
@@ -25,12 +24,21 @@ This project does not aim at more functionality. *It hardens the core*.
     - GUI and console system messages improved for understandability
 - **Extra features**: 
     - Free of in-app advertisement
-    - reduced command line output to the most relevant messages
-    - Torch compile option
+    - Torch compile option enabled
 
 *Project currently does NOT support AMD GPUs (ROCm) setups (they are untested)*
 
+Contents:
+
+[Installation](#installation)  
+[Usage](#usage)  
+[Benchmark](#benchmark)  
+[Known Issues](#known-issues)  
+[History](#history)  
+[Credits](#credits)
+
 ## Description
+
 
 Zonos is composed of 2 models: Transformer-Model and Hybrid model. Each can run independently from the other. 
 
@@ -69,18 +77,14 @@ In general Zonos is among the best TTS out there in terms of quality. Its, howev
 
 # Installation
 
-You need espeak-ng installed before using Zonos.
-Install it:
+You need espeak-ng installed before using Zonos:
 - Windows (from an admin console): `winget install --id=eSpeak-NG.eSpeak-NG  -e --silent --accept-package-agreements --accept-source-agreements`
 - Linux (Debian-based): `sudo apt install -y espeak-ng`
 - MacOS: `brew install espeak-ng`
 
-
-
 ## TLDR Installation
 
 These are the summarized commands to install and run core_zonos.  
-
 **Mac**
 ```
 git clone https://github.com/loscrossos/core_zonos
@@ -91,8 +95,6 @@ python3.12 -m venv .env_mac
 
 pip install -r requirements.txt
 ```
-
-
 **Windows**
 ```
 git clone https://github.com/loscrossos/core_zonos
@@ -103,9 +105,6 @@ py -3.12 -m venv .env_win
 
 pip install -r requirements.txt
 ```
-
-
-
 
 **Linux**
 ```
@@ -317,6 +316,7 @@ FINAL RESULT: It seems all model directories were found. Nothing will be downloa
 ```
 
 # Usage 
+
 You can use app as you always have. Just start the app and be creative!
 
 ## Starting the Apps
@@ -358,6 +358,29 @@ Transformer-TC-off| 11  | 44    | 125
 Hybrid            | n.a.| 98    | 130
 
 
+# Known Issues
+Documentation of Issues i encountered and know of.
+
+
+### General
+
+- Model can generate maximal 30 seconds of audio at a time.
+- Model hallucinates sometimes. Ways to solve:
+    - Try different seeds. Some seeds seem better than others.
+    - Try hybrid.
+
+
+### Mac
+- Only Transformer model works.
+- Currently no full MPS acceleration
+
+### Windows
+
+- None
+
+### Linux
+
+- None 
 
 # History
 
