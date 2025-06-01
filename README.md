@@ -77,12 +77,27 @@ In general Zonos is among the best TTS out there in terms of quality. Its, howev
 
 # Installation
 
+
+The installation in general consists of:
+
+- Pre-Requisites: Check that your system can actually run the model
+- Project Installation. It consists of 
+    - cloning the repository
+    - creating a virtual environment
+    - installing the requirements
+    - optionally: re-using our models
+    - starting the app.
+
+
+
+
+
+## TLDR Installation
+
 You need espeak-ng installed before using Zonos:
 - Windows (from an admin console): `winget install --id=eSpeak-NG.eSpeak-NG  -e --silent --accept-package-agreements --accept-source-agreements`
 - Linux (Debian-based): `sudo apt install -y espeak-ng`
 - MacOS: `brew install espeak-ng`
-
-## TLDR Installation
 
 These are the summarized commands to install and run core_zonos.  
 **Mac**
