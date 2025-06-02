@@ -335,6 +335,13 @@ FINAL RESULT: It seems all model directories were found. Nothing will be downloa
 You can use app as you always have. Just start the app and be creative!
 
 ## Starting the Apps
+
+- Torch Compile is disabled by default on Windows: To run with torch compile enabled on windows you must do one of these. then you can enable the option in the gradio app or the `configmodel.txt`, else the app will crash when it does not find the C++ compiler ("cl.exe"):
+    - run the app in a MSVC developer console (x64 mode)
+    - Open a normal console and run this before starting the app:
+        - `"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64`
+
+
 The apps have the following names:
 - `appzonos.py` : the original app
 
@@ -377,13 +384,15 @@ Hybrid            | n.a.| 98    | 130
 Documentation of Issues i encountered and know of.
 
 
-### General
+
+## General
 
 - Model can generate maximal 30 seconds of audio at a time.
 - Model hallucinates sometimes. Ways to solve:
     - Try different seeds. Some seeds seem better than others.
     - Try hybrid.
 
+## OS Specific
 
 ### Mac
 - Only Transformer model works.
@@ -396,6 +405,22 @@ Documentation of Issues i encountered and know of.
 ### Linux
 
 - None 
+
+
+## Trouble Shooting:
+
+- App can not find "cl.exe": this happens when you enable torch compile but your compiler is not visible.
+    - start app in MSVC developer console
+    - enable developer env with `"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64`
+
+
+
+
+
+
+
+
+
 
 # History
 
