@@ -50,3 +50,4 @@ gradio>=5.15.0
 
 
 dotenv
+psutil
