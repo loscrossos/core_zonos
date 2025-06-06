@@ -164,9 +164,22 @@ start the web-app with:
 Stop the app pressing `ctrl + c` on the console
 
 
+## Step-by-Step video guide
+
+you can watch step-by-step guides for your OS. This is the same information as the next chapter.
 
 
-## Pre-Requisites
+OS	    | Step-by-step install tutorial
+---	    | ---
+Mac	    | https://youtu.be/4CdKKLSplYA
+Windows	| https://youtu.be/Aj18HEw4C9U
+Linux  	| https://youtu.be/jK8bdywa968
+
+
+
+## Step-by-Step install guide
+
+### Pre-Requisites
 
 In general you should have your PC setup for AI development when trying out AI models, LLMs and the likes. If you have some experience in this area, you likely already fulfill most if not all of these items. Zonos has however light requirements on the hardware.
 
@@ -219,7 +232,7 @@ Thats what i use for all my development across all my systems. Its also fully fr
 
 
 
-## Project Installation
+### Project Installation
 
 If you setup your development environment using my `Crossos_Setup` project, you can do this from a normal non-admin account (which you should actually be doing for your own security).
 
@@ -259,7 +272,7 @@ Thats it.
 At this point you *could* just start the apps and start generating away... but it would first automatically download the models (6GB of them). If you dont have the models yet thats ok. But if you have already downloaded them OR if you have a dual/trial/multiboot machine and want to make them portable, read on...
 
 
-## Model Installation
+### Model Installation
 
 The needed models are about 6GB in total. You can get them in 3 ways:
 - **Automatic Download** as huggingface cache (easiest way)
@@ -272,12 +285,13 @@ e.g. `python appstudio.py --checkmodels`
 The app will report the models it sees and quit without downloading or loading anything.
 
 
-### Automatic download
+**Automatic download**
+
 just start the app. 
 
 Missing models will be downloaded. This is for when you never had the app installed before. The models will be downloaded to a huggingface-type folder in the "models" directory. This is ok if you want the most easy solution and dont care about portability (which is ok!). This is not reccomended as its not very reusable for software developers: e.g. if you want to do coding against the models from another project or want to store the models later. This supports multi-boot.
 
-### Manually triggered automatic download
+**Manually triggered automatic download**
 
 
 This is the CrossOS reccomended way. change to the the "models" directory (`cd models`) and start the downloader file:
@@ -290,7 +304,7 @@ manual dl|`./maclin_get_models.sh`|`win_get_models.bat`
 Models will be downloaded from hugging face. This will take some time as its 6GB of models. let it work.
 
 
-### Re-use existing models
+**Re-use existing models**
 
 
 You can re-use your existing models by configuring the path in the configuration file `modelconfig.txt`.
